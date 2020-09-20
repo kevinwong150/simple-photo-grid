@@ -1,0 +1,31 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+
+  .page-header {
+    background-color: var(--accent-2);
+    color: var(--accent-4);
+    height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    letter-spacing: 1px;
+    font-family: sans-serif;
+
+    &-logo {
+      height: 50px;
+      margin: 10px;
+    }
+  }
+
+  .page-body {
+    background-color: var(--accent-3);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+}
+

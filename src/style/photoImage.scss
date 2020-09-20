@@ -1,0 +1,33 @@
+.photo-image {
+  display: flex;
+  justify-content: center;
+
+  &.mod-loading, &.mod-error {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    pointer-events: none;
+
+    img {
+      width: calc(100% - 5px - 5px);
+      background-color: var(--shadow);
+      background-image: var(--icon);
+      background-size: 20px 20px;
+      background-position: center center;
+      background-repeat: no-repeat;
+      border-radius: 20px;
+    }
+  }
+
+  &.mod-loading {
+    --icon: var(--loading);
+  }
+
+  &.mod-error {
+    --icon: var(--error);
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}

@@ -1,0 +1,25 @@
+@import "./variable/colors.scss";
+@import "./variable/assets.scss";
+
+* {
+  font-family: "Comic Sans MS", "Tahoma", "Verdana";
+  color: var(--accent-1);
+  user-select: none;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+#root {
+  height: 100%;
+  width: 100%;
+}

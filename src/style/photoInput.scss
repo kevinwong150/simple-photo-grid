@@ -1,0 +1,56 @@
+.photo-input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.photo-input-textarea {
+  width: 100%;
+  max-width: 500px;
+  min-width: 300px;
+  min-height: 200px;
+  margin: 20px 0;
+}
+
+.photo-input-info {
+  display: flex;
+  margin-top: 0;
+}
+
+.photo-input-info dt {
+  display: inline-block;
+}
+
+.photo-input-info dd {
+  display: inline-block;
+}
+
+.photo-input-buttons {
+  display: flex;
+}
+
+.photo-input-button {
+  background-color: var(--accent-1);
+  color: var(--accent-4);
+  min-width: 80px;
+  min-height: 40px;
+  padding: 10px;
+  appearance: none;
+  border: unset;
+  border-radius: 6px;
+  outline: unset;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.photo-input-button:hover {
+  box-shadow: 0 0 6px var(--shadow);
+}
+
+.photo-input-button.mod-disabled {
+  pointer-events: none;
+  opacity: 0.3;
+}
+
