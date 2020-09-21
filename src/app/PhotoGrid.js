@@ -8,7 +8,7 @@ class PhotoGrid extends React.Component {
 
   getPhotoImages(context) {
     if (typeof(context.photos) === 'string' && context.photos !== "") {
-      return context.photos.split(",").map((src, index) => {
+      return context.photos.split("|").map((src, index) => {
         return <PhotoImage key={src + index} src={src} index={index}/>
       });
     }

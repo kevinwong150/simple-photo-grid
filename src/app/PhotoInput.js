@@ -26,7 +26,7 @@ class PhotoInput extends React.Component {
   }
 
   getPhotosCount(photos) {
-    return photos.split(",").filter((e) => e).length;
+    return photos.split("|").filter((e) => e).length;
   }
 
   handleSample() {
@@ -41,13 +41,13 @@ class PhotoInput extends React.Component {
         .map(() => {
           return Util.getRandomSizeCat(200, 400);
         })
-        .join(",\r")
+        .join(`|\r`)
     );
   }
 
   handleFormat() {
     this.setState({
-      photos: this.state.photos.split(",").map(e => e.trim()).join(",\r"),
+      photos: this.state.photos.split("|").map(e => e.trim()).join(`|\r`),
     });
   }
 
@@ -69,7 +69,7 @@ class PhotoInput extends React.Component {
     return (
       <div className="photo-input">
         <div className="photo-input-instruction">
-          Please input all images url, separate each with a ",". Sample is as
+          Please input all images url, separate each with a "<span style={{userSelect: "initial"}}>|</span>". Sample is as
           follow.
         </div>
         <textarea

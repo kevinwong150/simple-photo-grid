@@ -1,6 +1,7 @@
 .photo-image {
   display: flex;
   justify-content: center;
+  position: relative;
 
   &.mod-loading, &.mod-error {
     margin-top: 10px;

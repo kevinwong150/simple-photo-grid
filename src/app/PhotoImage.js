@@ -28,7 +28,7 @@ class PhotoImage extends React.Component {
 
   render() {
     return (
-      <a className={"photo-image " + (this.state.isLoading ? "mod-loading " : "") + (this.state.isError ? "mod-error" : "")} href={this.props.src} target="_blank" rel="noopener noreferrer" >
+      <a className={"photo-image " + (this.state.isLoading ? "mod-loading " : "") + (this.state.isError ? "mod-error" : "")} href={this.props.src} target="_blank" >
         <img
           key={"image:" + this.props.src}
           src={this.props.src}
