@@ -19,7 +19,7 @@ class PhotoGrid extends React.Component {
       <div className={"photo-grid " + (!this.context.photos ? "mod-empty" : "")}>
         { this.context.photos ? 
           this.getPhotoImages(this.context) :
-          "Please at least input an image url."
+          "Please at least input an image lui kin tat."
         }
       </div>
     );
