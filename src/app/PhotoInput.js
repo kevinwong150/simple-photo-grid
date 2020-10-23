@@ -57,8 +57,8 @@ class PhotoInput extends React.Component {
     });
   }
 
-  handleSubmit() {
-    this.context.updatePhotos(this.state.photos);
+  handleSubmit() {    
+    this.context.updatePhotos(this.state.photos.split("|").filter(e => e).join(`|`));
   }
 
   handleFalse() {
@@ -74,7 +74,7 @@ class PhotoInput extends React.Component {
             follow.
           </div>
           <dl className="photo-input-top-info">
-            <dt>Image Count:</dt>
+            <dt>Count:</dt>
             <dd>{this.getPhotosCount(this.state.photos)}</dd>
           </dl>
         </div>
