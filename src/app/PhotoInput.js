@@ -68,9 +68,15 @@ class PhotoInput extends React.Component {
   render() {
     return (
       <div className="photo-input">
-        <div className="photo-input-instruction">
-          Please input all images url, separate each with a "<span style={{userSelect: "initial"}}>|</span>". Sample is as
-          follow.
+        <div className="photo-input-top">
+          <div className="photo-input-top-instruction">
+            Please input all images url, separate each with a "<span style={{userSelect: "initial"}}>|</span>". Sample is as
+            follow.
+          </div>
+          <dl className="photo-input-top-info">
+            <dt>Image Count:</dt>
+            <dd>{this.getPhotosCount(this.state.photos)}</dd>
+          </dl>
         </div>
         <textarea
           className="photo-input-textarea"
@@ -79,10 +85,6 @@ class PhotoInput extends React.Component {
           onChange={this.handleChange}
           value={this.state.photos}
         ></textarea>
-        <dl className="photo-input-info">
-          <dt>Image Count:</dt>
-          <dd>{this.getPhotosCount(this.state.photos)}</dd>
-        </dl>
         <div className="photo-input-buttons">
           <button
             className="photo-input-button mod-sample"

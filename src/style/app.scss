@@ -5,8 +5,8 @@
   width: 100%;
 
   .page-header {
-    background-color: var(--accent-2);
-    color: var(--accent-4);
+    background-color: var(--dark);
+    color: var(--light-light);
     height: 76px;
     display: flex;
     align-items: center;
@@ -22,7 +22,7 @@
   }
 
   .page-body {
-    background-color: var(--accent-3);
+    background-color: var(--light);
     flex: 1;
     display: flex;
     flex-direction: column;

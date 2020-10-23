@@ -4,53 +4,75 @@
   align-items: center;
   justify-content: center;
   padding: 20px;
-}
-
-.photo-input-textarea {
+  margin: 0 auto;
   width: 100%;
   max-width: 800px;
-  min-width: 300px;
-  min-height: 200px;
-  margin: 20px 0;
+  box-sizing: border-box;
+
+  &-top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+
+    &-instruction {
+      margin-right: 20px;
+      margin-top: 5px;
+    }
+    
+    &-info {
+      display: flex;
+      margin: 5px 0 0 0;
+
+      dt {
+        display: inline-block;
+      } 
+      
+      dd {
+        display: inline-block;
+        margin-left: 20px;
+      }
+    }
+  }
+
+  &-textarea {
+    width: 100%;
+    min-width: 300px;
+    min-height: 200px;
+    margin: 10px 0 20px 0;
+  }
+
+  &-buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 160px));
+    grid-gap: 10px;
+    justify-content: space-between;
+    width: 100%;
+
+    .photo-input-button {
+      background-color: var(--dark-light);
+      color: var(--light);
+      min-width: 100px;
+      min-height: 30px;
+      padding: 5px 20px;
+      appearance: none;
+      border: unset;
+      border-radius: 6px;
+      outline: unset;
+      cursor: pointer;
+      margin-bottom: 10px;
+
+      &:hover {
+        box-shadow: 0 0 6px var(--shadow);
+      }
+      
+      &.mod-disabled {
+        pointer-events: none;
+        opacity: 0.3;
+      }
+    }
+  }
 }
 
-.photo-input-info {
-  display: flex;
-  margin-top: 0;
-}
-
-.photo-input-info dt {
-  display: inline-block;
-}
-
-.photo-input-info dd {
-  display: inline-block;
-}
-
-.photo-input-buttons {
-  display: flex;
-}
-
-.photo-input-button {
-  background-color: var(--accent-1);
-  color: var(--accent-4);
-  min-width: 80px;
-  min-height: 40px;
-  padding: 10px;
-  appearance: none;
-  border: unset;
-  border-radius: 6px;
-  outline: unset;
-  margin: 0 10px;
-  cursor: pointer;
-}
-
-.photo-input-button:hover {
-  box-shadow: 0 0 6px var(--shadow);
-}
-
-.photo-input-button.mod-disabled {
-  pointer-events: none;
-  opacity: 0.3;
-}
 

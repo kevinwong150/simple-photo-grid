@@ -1,9 +1,11 @@
-@import "./variable/colors.scss";
-@import "./variable/assets.scss";
+@import "./variables/colors.scss";
+@import "./variables/assets.scss";
+@import "./variables/fonts.scss";
 
 * {
   font-family: "Comic Sans MS", "Tahoma", "Verdana";
-  color: var(--accent-1);
+  font-family: "Roboto", "sans-serif", "system-ui";
+  color: var(--dark-dark);
   user-select: none;
 }
 
