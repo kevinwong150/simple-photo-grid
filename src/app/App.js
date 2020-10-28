@@ -2,7 +2,7 @@ import React from "react";
 import PhotoGrid from "./PhotoGrid";
 import PhotoInput from "./PhotoInput";
 import PhotoContext from "./PhotoContext";
-import logo from "../assets/logo.svg";
+import logo from "../assets/logo.png";
 import "../style/app.scss";
 
 class App extends React.Component {
