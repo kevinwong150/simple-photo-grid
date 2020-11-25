@@ -29,14 +29,16 @@ class PhotoImage extends React.Component {
   render() {
     return (
       <a className={"photo-image " + (this.state.isLoading ? "mod-loading " : "") + (this.state.isError ? "mod-error" : "")} href={this.props.src} target="_blank" rel="noopener noreferrer">
-        <img
-          key={"image:" + this.props.src}
-          src={this.props.src}
-          alt="" //empty alt hide the broken image icon onerror
-          onLoad={this.handleOnload}
-          onError={this.handleError}
-          style={this.state.isLoading || this.state.isError ? {minHeight: Util.getRandomInRange(200, 400) + "px"} : {}}
-        />
+        <span className="photo-image-content">
+          <img
+            key={"image:" + this.props.src}
+            src={this.props.src}
+            alt="" //empty alt hide the broken image icon onerror
+            onLoad={this.handleOnload}
+            onError={this.handleError}
+            style={this.state.isLoading || this.state.isError ? {minHeight: Util.getRandomInRange(200, 400) + "px"} : {}}
+          />
+        </span>
       </a>
     );
   }

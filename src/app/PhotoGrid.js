@@ -6,6 +6,14 @@ import "../style/photoGrid.scss";
 class PhotoGrid extends React.Component {
   static contextType = PhotoContext;
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      hasGap: true,
+      hasRoundCorner: true
+    };
+  }
+
   getPhotoImages(context) {
     if (typeof(context.photos) === 'string' && context.photos !== "") {
       return context.photos.split("|").map((src, index) => {
@@ -15,8 +23,10 @@ class PhotoGrid extends React.Component {
   }
 
   render() {
+    const { hasGap, hasRoundCorner } = this.state;
+
     return (
-      <div className={"photo-grid " + (!this.context.photos ? "mod-empty" : "")}>
+      <div className={"photo-grid " + (!this.context.photos ? "mod-empty " : " ") + (hasGap ? "mod-gap " : " ")  + (hasRoundCorner ? "mod-round-corner " : " ")}>
         { this.context.photos ? 
           this.getPhotoImages(this.context) :
           "Please at least input an image url."
