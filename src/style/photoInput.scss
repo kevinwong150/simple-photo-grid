@@ -20,10 +20,15 @@
     &-instruction {
       margin-right: 20px;
       margin-top: 5px;
+
+      .mod-tip {
+        font-size: 12px;
+      }
     }
     
     &-info {
       display: flex;
+      align-items: flex-end;
       margin: 5px 0 0 0;
 
       dt {

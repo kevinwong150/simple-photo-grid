@@ -71,7 +71,10 @@ class PhotoInput extends React.Component {
         <div className="photo-input-top">
           <div className="photo-input-top-instruction">
             Please input all images url, separate each with a "<span style={{userSelect: "initial"}}>|</span>". Sample is as
-            follow.
+            follow.<br/>
+            <span className="mod-tip">
+              (Tips: Check out Chrome Extension <a rel="noopener noreferrer" href="https://chrome.google.com/webstore/detail/image-url-oneclick/cbgokcojacngdokhalmlajpdjjkbdeob" target="_blank">Image URL Oneclick</a> for better opened image's url managing.)
+            </span>
           </div>
           <dl className="photo-input-top-info">
             <dt>Count:</dt>
